@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class AccountManagementSteps {
@@ -38,11 +39,17 @@ public class AccountManagementSteps {
 
     @Then("My account page is displayed")
     public void myAccountPageIsDisplayed() {
+        String ExpectedResult = "My Account";
+        String ActualResult = driver.getTitle();
+        Assert.assertEquals(ExpectedResult, ActualResult);
     }
 
 
     @Then("Error message should be displayed that account already exists")
     public void errorMessageShouldBeDisplayedThatAccountAlreadyExists() {
+        String ExpectedResult = "Create New Customer Account";
+        String ActualResult = driver.getTitle();
+        Assert.assertEquals(ExpectedResult, ActualResult);
 
     }
 
@@ -68,5 +75,9 @@ public class AccountManagementSteps {
 
     @Then("Error message is displayed that account is not registered")
     public void errorMessageIsDisplayedThatAccountIsNotRegistered() {
+        String ExpectedResult = "Customer Login";
+        String ActualResult = driver.getTitle();
+        Assert.assertEquals(ExpectedResult, ActualResult);
+
     }
 }

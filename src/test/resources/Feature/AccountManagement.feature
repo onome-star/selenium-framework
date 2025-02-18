@@ -9,7 +9,7 @@ Feature: Account Management
 
     Examples:
       |firstname|lastname|email                 |password|confirmpassword|
-      |logan    |brand   |loganbrand24@gmail.com|Logan@21|Logan@21       |
+      |logan    |brand   |loganbrand25@gmail.com|Logan@21|Logan@21       |
 
   @DuplicateAccount
   Scenario Outline: Create an account - duplicate account creation not allowed
@@ -42,4 +42,4 @@ Feature: Account Management
 
       Examples:
         |email                 |password|
-        |loganbrand25@gmail.com|Logan@21|
+        |loganbrand26@gmail.com|Logan@21|
