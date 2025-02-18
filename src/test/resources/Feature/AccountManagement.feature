@@ -9,7 +9,7 @@ Feature: Account Management
 
     Examples:
       |firstname|lastname|email                 |password|confirmpassword|
-      |logan    |brand   |loganbrand23@gmail.com|Logan@21|Logan@21       |
+      |logan    |brand   |loganbrand24@gmail.com|Logan@21|Logan@21       |
 
   @DuplicateAccount
   Scenario Outline: Create an account - duplicate account creation not allowed
@@ -20,7 +20,7 @@ Feature: Account Management
 
     Examples:
       |firstname|lastname|email                 |password|confirmpassword|
-      | logan   |brand   |loganbrand23@gmail.com|Logan@21| Logan@21      |
+      | logan   |brand   |loganbrand24@gmail.com|Logan@21| Logan@21      |
 
   @SignIn
   Scenario Outline: Account Login - Registered customer to login with their username and password
@@ -31,7 +31,7 @@ Feature: Account Management
 
     Examples:
       |email                 |password|
-      |loganbrand23@gmail.com|Logan@21|
+      |loganbrand24@gmail.com|Logan@21|
 
     @SignIn-UnregisteredCustomer
   Scenario Outline: Account Login - Customer not registered should encounter an error
@@ -42,4 +42,4 @@ Feature: Account Management
 
       Examples:
         |email                 |password|
-        |loganbrand24@gmail.com|Logan@21|
+        |loganbrand25@gmail.com|Logan@21|
